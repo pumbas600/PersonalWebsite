@@ -7,6 +7,22 @@
     margin-top: -15px;
 }
 
+.java-logo {
+    color: #ff2300;
+}
+
+.js-logo {
+    color: #fdca6e;
+}
+
+.html-logo {
+    color: #df4a24;
+}
+
+.css-logo {
+    color: #196fb5;
+}
+
 .content-title {
     font-size: 30px;
     font-weight: bold;
@@ -21,15 +37,20 @@
     display: flex;
 }
 
-.content-language, .content-link {
-    flex: 50%;
+.content-language {
+    flex: 75%;
 }
 
 .content-language i {
     font-size: 18px;
 }
 
+.language-group {
+    margin-right: 15px;
+}
+
 .content-link {
+    flex: 20%;
     display: inherit;
     justify-content: right;
 }
