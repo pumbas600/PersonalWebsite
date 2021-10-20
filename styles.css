@@ -17,6 +17,23 @@
     float: right;
 }
 
+.content-footer {
+    display: flex;
+}
+
+.content-language, .content-link {
+    flex: 50%;
+}
+
+.content-language i {
+    font-size: 18px;
+}
+
+.content-link {
+    display: inherit;
+    justify-content: right;
+}
+
 .timeline {
     position: relative;
     max-width: 1200px;
