@@ -39,6 +39,8 @@
 
 .content-language {
     flex: 75%;
+    display: inherit;
+    flex-wrap: wrap;
 }
 
 .content-language i {
