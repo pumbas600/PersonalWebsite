@@ -1,29 +1,86 @@
 :root {
-    --light-grey: rgb(228, 228, 228);
+    --primary-colour: #1f2129;
+    --secondary-color: rgb(39, 41, 52);
+    --highlight-primary: rgb(129, 91, 233);
+    --text-primary: rgb(242, 244, 251);
+    --text-secondary: #9b9d9f;
 }
 
-.logo {
-    height: 40px;
-    margin-top: -15px;
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-secondary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
+    margin: 0 !important;
+}
+
+.body-content {
+    margin: 20px;
+    margin-top: 100px;
+}
+
+a {
+    color: #9cd3ff;
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+}
+
+.centred-body {
+    width: 1200px;
+    left: 50%;
+    margin-left: -600px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+}
+
+.header-background {
+    width: 100%;
+    height: 150px;
+    background-color: var(--highlight-primary);
+}
+
+.header-text {
+    margin-left: 50px;
+    position: relative;
+    top: -40px;
+}
+
+.header-text h1 {
+    font-size: 80px;
+}
+
+.profile-image {
+    margin: 30px;
+}
+
+.profile-image img {
+    height: 200px;
+    border-radius: 50%;
 }
 
 .java-logo {
-    color: #ff2300;
+    color: #ff7d4a;
 }
 
 .js-logo {
-    color: #fdca6e;
+    color: #fdf253;
 }
 
 .html-logo {
-    color: #df4a24;
+    color: #f3572f;
 }
 
 .css-logo {
-    color: #196fb5;
+    color: #2480cc;
 }
 
 .content-title {
+    color: var(--text-primary);
     font-size: 30px;
     font-weight: bold;
 }
@@ -60,12 +117,12 @@
 .content-container {
     padding: 10px 40px;
     position: relative;
-    width: 50%;
+    width: 60%;
 }
 
 .content {
     padding: 20px 30px;
-    background-color: var(--light-grey);
+    background-color: var(--primary-colour);
     position: relative;
     border-radius: 10px;
 }
