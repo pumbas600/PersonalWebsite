@@ -2,6 +2,7 @@
     --primary-colour: #1f2129;
     --secondary-color: rgb(39, 41, 52);
     --highlight-primary: rgb(129, 91, 233);
+    --highlight-secondary: #ffa400;
     --text-primary: rgb(242, 244, 251);
     --text-secondary: #9b9d9f;
 }
@@ -21,6 +22,7 @@ body {
 
 a {
     color: #9cd3ff;
+    text-decoration: none !important;
 }
 
 h1, h2, h3 {
@@ -36,6 +38,7 @@ h1, h2, h3 {
 
 .header {
     display: flex;
+    justify-content: space-between;
 }
 
 .header-background {
@@ -45,9 +48,12 @@ h1, h2, h3 {
 }
 
 .header-text {
-    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 30px;
     position: relative;
-    top: -40px;
+    top: -50px;
 }
 
 .header-text h1 {
@@ -55,12 +61,75 @@ h1, h2, h3 {
 }
 
 .profile-image {
-    margin: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .profile-image img {
     height: 200px;
     border-radius: 50%;
+}
+
+.profile-links {
+    top: -70px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.profile-links a {
+    margin-left: 20px;
+    font-size: 24px;
+    color: var(--text-primary) !important;
+    transition: transform .2s ease;
+}
+
+.profile-links a:hover {
+    transform: translate3d(0, -0.2em, 0);
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--text-primary);
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.nav-button {
+    margin-left: 15px;
+    background-color: var(--highlight-secondary);
+    border-radius: 1rem;
+    width: 150px;
+    font-weight: 600;
+}
+
+.nav-button:hover {
+    background-color: #db8f00;
+}
+
+.nav-button:active {
+    border-color: var(--highlight-secondary);
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: relative;
+    top: -45px;
 }
 
 .java-logo {
