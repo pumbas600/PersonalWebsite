@@ -132,22 +132,6 @@ h1, h2, h3 {
     top: -45px;
 }
 
-.java-logo {
-    color: #ff7d4a;
-}
-
-.js-logo {
-    color: #fdf253;
-}
-
-.html-logo {
-    color: #f3572f;
-}
-
-.css-logo {
-    color: #2480cc;
-}
-
 .content-title {
     color: var(--text-primary);
     font-size: 30px;
@@ -174,11 +158,11 @@ h1, h2, h3 {
 }
 
 .language-group {
-    margin-right: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .content-link {
-    flex: 20%;
     display: inherit;
     justify-content: right;
 }
@@ -190,7 +174,7 @@ h1, h2, h3 {
 }
 
 .content {
-    padding: 20px 30px;
+    padding: 15px 30px 5px 30px;
     background-color: var(--primary-colour);
     position: relative;
     border-radius: 10px;
