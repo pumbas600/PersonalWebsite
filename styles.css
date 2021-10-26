@@ -64,7 +64,7 @@ h2 {
     align-items: flex-end;
     margin-right: 30px;
     position: relative;
-    top: -50px;
+    top: -30px;
 }
 
 .header-text h1 {
@@ -82,7 +82,7 @@ h2 {
 }
 
 .profile-links {
-    top: -70px;
+    top: -60px;
     position: relative;
     display: flex;
     flex-direction: row;
