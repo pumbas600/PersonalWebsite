@@ -1,13 +1,3 @@
-:root {
-    --primary-colour: #1f2129;
-    --secondary-colour: rgb(39, 41, 52);
-    --highlight-primary: rgb(129, 91, 233);
-    --highlight-secondary: rgb(255, 164, 0);
-    --text-primary: rgb(242, 244, 251);
-    --text-secondary: #9b9d9f;
-    --link-colour: #9cd3ff;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -18,6 +8,26 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     line-height: 1.5;
     margin: 0 !important;
+}
+
+body.dark {
+    --primary-colour: #1f2129;
+    --secondary-colour: rgb(39, 41, 52);
+    --highlight-primary: rgb(129, 91, 233);
+    --highlight-secondary: rgb(255, 164, 0);
+    --text-primary: rgb(242, 244, 251);
+    --text-secondary: #9b9d9f;
+    --link-colour: #9cd3ff;
+}
+
+body.light {
+    --primary-colour: #e1e3ec;
+    --secondary-colour: rgb(206, 208, 216);
+    --highlight-primary: rgb(129, 91, 233);
+    --highlight-secondary: rgb(255, 164, 0);
+    --text-primary: rgb(242, 244, 251);
+    --text-secondary: #9b9d9f;
+    --link-colour: #1094ff;
 }
 
 section {
@@ -229,36 +239,49 @@ h2 {
 
 .display-content {
     padding: 15px 30px 5px 30px;
-    position: relative;
     border-radius: 10px;
+    transition: all 1.5s ease-in-out;
+    transition-delay: 0.5s;
 }
 
 .content {
     background-color: var(--primary-colour);
     position: relative;
-    flex: 60% 0;
+    flex: 60% 0 0;
+    z-index: 2;
 }
 
 .image-left .content {
-    filter: drop-shadow(-8px 8px 5px rgba(0, 0, 0, 0.5));
+    box-shadow: -8px 8px 10px 0px rgb(0 0 0 / 50%);
 }
 
 .image-right .content {
-    filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
+    box-shadow: 8px 8px 10px 0px rgb(0 0 0 / 50%);
 }
 
 .content-images {
     background-color: var(--highlight-primary);
-    flex: auto;
     position: relative;
+    flex: 45%;
     bottom: -10px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .image-left .content-images {
-    right: -10px;
+    margin-left: 0 !important;
+    margin-right: -5%;
 }
 
 .image-right .content-images {
-    left: -10px;
+    margin-left: -5%;
+    margin-right: 0 !important;
+}
+
+.content-images:hover {
+    transition-delay: 0s;
+    transition: all 2s ease-in-out;
+    z-index: 4;
+    width: 60%;
+    margin-left: -20%;
+    margin-right: -20%;
 }
