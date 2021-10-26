@@ -2,10 +2,14 @@
     --primary-colour: #1f2129;
     --secondary-colour: rgb(39, 41, 52);
     --highlight-primary: rgb(129, 91, 233);
-    --highlight-secondary: #ffa400;
+    --highlight-secondary: rgb(255, 164, 0);
     --text-primary: rgb(242, 244, 251);
     --text-secondary: #9b9d9f;
     --link-colour: #9cd3ff;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +18,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     line-height: 1.5;
     margin: 0 !important;
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .body-content {
@@ -62,7 +71,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 30px;
     position: relative;
 }
 
@@ -73,7 +81,6 @@ h2 {
 }
 
 .profile-image {
-    margin-left: 30px;
     margin-top: 30px;
 }
 
@@ -215,14 +222,43 @@ h2 {
 }
 
 .content-container {
-    padding: 10px 40px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.display-content {
+    padding: 15px 30px 5px 30px;
     position: relative;
-    width: 60%;
+    border-radius: 10px;
 }
 
 .content {
-    padding: 15px 30px 5px 30px;
     background-color: var(--primary-colour);
     position: relative;
-    border-radius: 10px;
+    flex: 60% 0;
+}
+
+.image-left .content {
+    filter: drop-shadow(-8px 8px 5px rgba(0, 0, 0, 0.5));
+}
+
+.image-right .content {
+    filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
+}
+
+.content-images {
+    background-color: var(--highlight-primary);
+    flex: auto;
+    position: relative;
+    bottom: -10px;
+    z-index: -1;
+}
+
+.image-left .content-images {
+    right: -10px;
+}
+
+.image-right .content-images {
+    left: -10px;
 }
