@@ -1,17 +1,21 @@
 $(function() {
+    $('.carousel-images').each(function(_, element) {
+        const wrappedElement = $(element);
+        var scrollerHtml = '<div class="scroller">';
+        wrappedElement.children().each(function(index, carouselImage) {
+            var additionalClasses = '';
+            if (index != 0) {
+                $(carouselImage).addClass('hide');
+            }
+            else {
+                additionalClasses += 'current-image-dot';
+            }
 
-    $('.content-images').each(function(index, element) {
-        const contentImages = $(element);
-        const content = contentImages.closest('.content-container').find('.content');
+            scrollerHtml += `<div index=${index} class="${additionalClasses} image-dot"></div>`
+        });
+        scrollerHtml += '</div>';
 
-        contentImages.hover(
-            function() {
-                contentImages.addClass('expanded-images')
-                content.addClass('blurred')
-            },
-            function() {
-                contentImages.removeClass('expanded-images')
-                content.removeClass('blurred')
-            });
+        // Append html
+        wrappedElement.parent().html(wrappedElement.parent().html() + scrollerHtml);
     });
 });

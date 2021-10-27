@@ -59,6 +59,10 @@ h2 {
     font-size: 25px;
 }
 
+.hide {
+    display: none;
+}
+
 .centred-body {
     width: 1200px;
     left: 50%;
@@ -221,14 +225,16 @@ h2 {
 
 .language-group {
     margin-right: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
+    margin-top: 2px;
 }
 
 .content-link {
-    width: 100px;
     flex: auto;
-    display: inherit;
+    display: flex;
     justify-content: right;
+    white-space: nowrap;
+    align-items: flex-end;
 }
 
 .content-container {
@@ -238,7 +244,7 @@ h2 {
 }
 
 .display-content {
-    padding: 15px 30px 5px 30px;
+    padding: 15px 30px 15px 30px;
     border-radius: 10px;
     transition: all 1.5s ease-in-out;
     transition-delay: 0.5s;
@@ -247,7 +253,7 @@ h2 {
 .content {
     background-color: var(--primary-colour);
     position: relative;
-    flex: 60% 0 0;
+    width: calc(60% - 60px);
     z-index: 2;
 }
 
@@ -260,11 +266,15 @@ h2 {
 }
 
 .content-images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color: var(--highlight-primary);
     position: relative;
-    flex: 45%;
+    width: calc(45% - 60px);
     bottom: -10px;
     z-index: 1;
+    padding-right: calc(5% + 30px);
 }
 
 .image-left .content-images {
@@ -277,15 +287,40 @@ h2 {
     margin-right: 0 !important;
 }
 
-.content-images:hover {
+.content-images img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: fit-content;
+}
+
+/* .content-images:hover {
     transition-delay: 0s;
     transition: all 2s ease-in-out;
     z-index: 4;
-    width: 60%;
+    width: calc(60% - 60px);
     margin-left: -20%;
     margin-right: -20%;
 }
 
 .blurred {
     filter: blur(1px);
+} */
+
+.scroller {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.image-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--secondary-colour);
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.current-image-dot {
+    background-color: var(--highlight-secondary);
 }
